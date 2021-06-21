@@ -19,10 +19,33 @@ function drinkOrder(size, type) {
         case "orange":
             drinkType = 'Orangeade';
     }
-    return `you have ordered a ${size} drink of ${drinkType}.`;
+    return `you have ordered a ${size} drink of ${drinkType}.`; //return result
 }
 //variables
 var drinkSize = 'large',
     drinkType = 'lemon';
 
-document.write(drinkOrder(drinkSize, drinkType)); //call function and pass parameters and write result
+document.write(drinkOrder(drinkSize, drinkType), '<br>'); //call function and pass parameters and write result
+
+//function to calculate 2 numbers
+function calculator(number1, number2, operator) {
+    switch (operator) {
+        case "+":
+            value = number1 + number2;
+            break;
+        case "-":
+            value = number1 - number2;
+            break;
+        case "*":
+            value = number1 * number2;
+            break;
+        case "/":
+            value = number1 / number2;
+            break;
+        case "%":
+            value = number1 % number2;
+    }
+    return `${number1} ${operator} ${number2} = ${value}.`; //return result
+}
+
+console.log(calculator(4, 3, "%")); //call function and pass parameters and write result
